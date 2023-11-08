@@ -6,8 +6,8 @@
 
 ```mermaid
   graph LR;
-      A[FW 5x9]-->B[LB 4x9];
-      B-->C[VMSS 3x9];
+      A[FW 4x9]-->B[LB 4x9];
+      B-->C[VMSS 99.95%];
       C-->D[Disk 5x9];
 ```
 
