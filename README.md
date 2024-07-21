@@ -21,7 +21,7 @@ Infrastructure should favor:
     - Reduce distance between userbase and workload.  For starters, ensure that P75 of the userbase are within two timezones on the same hemisphere as the workload.
     - Disk IOPS should be proportional to load.  For starters, make the best effort to make the average IOPS equal or higher than the average request-per-second load.
     - Replica count of workloads within a single virtual machine should be a multiple of the virtual machine's vCPU.
-- Three-nine Uptime minimum
+- Three-nine Uptime minimum for critical systems and Two-nine Uptime minimum for non-critical systems
 - RPO: 4 hours maximum
 - MTTR: 4 hours maximum
 - Immutable and evergreen virtual machines for best security
@@ -29,7 +29,7 @@ Infrastructure should favor:
     - Ensure that root or administrative accounts are deleted or disabled in the oeprating system.
     - Ensure that virtual machines and workloads are immutable.  Once the virtual machine instance and workloads are deployed, they cannot be changed.
     - Ensure that the operating system and workloads are evergreen.  The virtual machines should be rebooting every night in order to apply the latest updates.  On reboot, the operating system should deploy the latest workloads and discard the old workloads.
-- Only use high-strength cryptographic keys for authentication (ED25519 only)
+- Consider using high-strength cryptographic keys for authentication (e.g. ED25519 is highly recommended)
 - Firewall with layer 3 and layer 7 protection serves as the edge of the trust zone.  There should be no more than three people at any given time with administrative access to machines within the trust zone.  This access must be reviewed and assessed periodically (every quarter for starters).
 
 # Web Experience
